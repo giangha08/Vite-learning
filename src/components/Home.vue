@@ -11,9 +11,9 @@
 
 <script setup>
 import {useStore} from 'vuex'
-
+import {useRouter} from 'vue-router'
 import {computed,ref} from 'vue'
-
+const router =useRouter()
 const store = useStore()
 
 const name = computed(()=>{
@@ -24,6 +24,7 @@ const newName =ref('')
 function saveName(){
     store.dispatch('saveName', newName.value)
     newName.value =''
+    router.push('/about')
 }
 
 
