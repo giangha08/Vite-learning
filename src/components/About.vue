@@ -11,7 +11,7 @@ import {computed} from 'vue'
 const store = useStore()
 
 const name = computed(()=>{
-        return store.state.user.name
+        return store.state.user.name;
     })
 
 </script>
